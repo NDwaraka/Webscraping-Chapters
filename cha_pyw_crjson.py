@@ -16,7 +16,7 @@ def is_side_story(title):
 
 
 # OUTPUT_DIR = r"C:\Users\Lenovo\Documents\pers_proj/DamnHunterLife"
-OUTPUT_DIR = r"C:\Users\Lenovo\Documents\pers_proj/paywall/DamnHunterLife"
+OUTPUT_DIR = r"<link>"
 
 chapters_manifest = []
 
@@ -27,7 +27,7 @@ for file in sorted(os.listdir(OUTPUT_DIR)):
         chapters_manifest.append({
             "title": title,
             # "filename": f"../DamnHunterLife/{file}"
-            "filename": f"DamnHunterLife/{file}"
+            "filename": f"<link>{file}"
         })
         
 # sort the list in-place by extracted number from title
