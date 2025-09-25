@@ -3,11 +3,11 @@ from bs4 import BeautifulSoup
 import os
 
 # Constants
-URL = "https://hyacinthbloom.com/series/shitty-hunter-life/"
+URL = "<link>"
 HEADERS = {"User-Agent": "Mozilla/5.0"}
-API_ENDPOINT = "https://hyacinthbloom.com/wp-json/wp/v2/posts/"
+API_ENDPOINT = "<link>"
 TEMPLATE_FILE = "template.html"
-OUTPUT_DIR = r"C:\Users\Lenovo\Documents\pers_proj/DamnHunterLife"  # 🔁 Your custom folder
+OUTPUT_DIR = r"<link>"  # 🔁 Your custom folder
 
 # Load the HTML template
 with open(TEMPLATE_FILE, "r", encoding="utf-8") as f:
