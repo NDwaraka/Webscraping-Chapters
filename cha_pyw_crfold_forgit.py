@@ -7,7 +7,7 @@ URL = ""
 HEADERS = {""}
 API_ENDPOINT = ""
 TEMPLATE_FILE = "template.html"
-OUTPUT_DIR = r""  # 🔁 Your custom folder
+OUTPUT_DIR = r""  # 
 
 # Load the HTML template
 with open(TEMPLATE_FILE, "r", encoding="utf-8") as f:
@@ -16,7 +16,7 @@ with open(TEMPLATE_FILE, "r", encoding="utf-8") as f:
 # Create output folder if it doesn't exist
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-# [Step 1: Scrape page_ids and chapter_links remains unchanged]
+
 
 response = requests.get(URL, headers=HEADERS)
 response.raise_for_status()
@@ -37,11 +37,11 @@ for li in eplist:
         page_ids.append(data_id)
         # chapter_links.append(href)
 
-# Reverse to maintain correct order
-page_ids.reverse()
-# chapter_links.reverse()
 
-# Step 2: Process each chapter
+page_ids.reverse()
+
+
+
 for data_id in page_ids:
     api_url = f"{API_ENDPOINT}{data_id}"
     print(f"Fetching post ID {data_id}...")
@@ -59,7 +59,7 @@ for data_id in page_ids:
         final_html = html_template.replace("{{title}}", title).replace("{{content}}", cleaned_html)
 
         safe_title = "".join(c if c.isalnum() or c in " -_()" else "_" for c in title)
-        filename = os.path.join(OUTPUT_DIR, f"{safe_title}.html")  # 🔁 Save in custom folder
+        filename = os.path.join(OUTPUT_DIR, f"{safe_title}.html")
 
         with open(filename, "w", encoding="utf-8") as f:
             f.write(final_html)
