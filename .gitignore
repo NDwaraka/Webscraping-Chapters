@@ -7,3 +7,13 @@ __pycache__/
 
 # VSCode settings (optional)
 .vscode/
+
+# secret.txt
+# temp/
+cha_pyw_crfold.py
+cha_pyw_crjson.py
+cha_pyw_dwnch.py
+chapids.py
+chapitds_pywlc.py
+pywlc.py
+lean_canvas.py

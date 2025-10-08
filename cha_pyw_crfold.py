@@ -3,11 +3,12 @@ from bs4 import BeautifulSoup
 import os
 
 # Constants
-URL = "https://hyacinthbloom.com/series/shitty-hunter-life/"
+# URL = "https://hyacinthbloom.com/series/shitty-hunter-life/"
+URL = "https://transweaver.com/series/why-did-i-have-to-transmigrate-as-the-villains-younger-brother/"
 HEADERS = {"User-Agent": "Mozilla/5.0"}
-API_ENDPOINT = "https://hyacinthbloom.com/wp-json/wp/v2/posts/"
+API_ENDPOINT = "https://transweaver.com/wp-json/wp/v2/posts/"
 TEMPLATE_FILE = "template.html"
-OUTPUT_DIR = r"C:\Users\Lenovo\Documents\pers_proj/DamnHunterLife"  # 🔁 Your custom folder
+OUTPUT_DIR = r"C:\Users\Lenovo\Documents\pers_proj/WhyDidIHaveToTransAsTheVillainsYoungerBrother"  # 🔁 Your custom folder
 
 # Load the HTML template
 with open(TEMPLATE_FILE, "r", encoding="utf-8") as f:
@@ -32,7 +33,8 @@ for li in eplist:
     # a_tag = li.find("a")
     # href = a_tag["href"] if a_tag else None
 
-    if data_id and href:
+    # if data_id and href:
+    if data_id:
         page_ids.append(data_id)
         # chapter_links.append(href)
 
